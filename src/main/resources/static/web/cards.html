@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="css/cards.css">
     <title>Cards</title>
 </head>
-<body>
+<body class="app-body">
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/web/accounts.html">Banking</a>
+        <a class="navbar-brand" href="/web/home.html">
+            <img src="img/logoBankWhite.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            MatBank</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,7 +31,7 @@
     </div>
 </nav>
 
-<div id="app">
+<div class="container" id="app">
     <div class="toast-container position-absolute p-3 top-0 end-0" id="toastPlacement">
         <div id="danger-toast" data-bs-delay="2000" class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="d-flex">
@@ -40,7 +42,7 @@
             </div>
         </div>
     </div>
-    <div class="container bg-light">
+    <div class="container">
         <div class="row mt-5">
             <div class="col">
                 <div class="row">
@@ -62,7 +64,7 @@
                                 <span class="plastic-card__label">{{ card.type}} {{ card.color }}</span>
                             </div>
                             <img class="plastic-card__front-logo plastic-card__logo"
-                                 src="img/logoBank.png">
+                                 src="img/logoBankWhite.png">
                             <p class="plastic-card_numer">{{ card.number}}</p>
                             <div class="plastic-card__space-60">
                                 <span class="plastic-card__label">card holder</span>
@@ -84,7 +86,7 @@
                                     <span class="plastic-card__label">{{ card.type}} {{ card.color }}</span>
                                 </div>
                                 <img class="plastic-card__back-logo plastic-card__logo"
-                                     src="img/logoBank.png">
+                                     src="img/logoBankWhite.png">
                             </div>
                         </div>
                     </div>
@@ -102,7 +104,7 @@
                                 <span class="plastic-card__label">{{ card.type}} {{ card.color }}</span>
                             </div>
                             <img class="plastic-card__front-logo plastic-card__logo"
-                                 src="img/logo vinotinto.png">
+                                 src="img/logoBankWhite.png">
                             <p class="plastic-card_numer">{{ card.number}}</p>
                             <div class="plastic-card__space-60">
                                 <span class="plastic-card__label">card holder</span>
@@ -124,7 +126,7 @@
                                     <span class="plastic-card__label">{{ card.type}} {{ card.color }}</span>
                                 </div>
                                 <img class="plastic-card__back-logo plastic-card__logo"
-                                     src="img/logo vinotinto.png">
+                                     src="img/logoBankWhite.png">
                             </div>
                         </div>
                     </div>

@@ -38,6 +38,21 @@
     width: 60%;
 }
 
-.containerApp{
-    background-color: #c4cfe9;
+.container{
+    background-color: #d3dcee;
 }
+
+.navbar{
+    background: linear-gradient(270deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+    color: white;
+}
+
+.app-body{
+    background-color: #e2e8f4;
+}
+
+.index-body{
+    background-color: #d3dcee;
+}
+
+
