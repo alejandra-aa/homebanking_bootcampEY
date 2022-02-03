@@ -67,20 +67,17 @@ public class AccountController {
         accountRepository.save(acc);
         return new ResponseEntity<>("Created succesfully", HttpStatus.CREATED);
     }
-/*
-    @RequestMapping(value="/clients/current/accounts", method = RequestMethod.GET)
-    public List<AccountDTO> getCurrentAccounts(Authentication authentication){
+
+    @RequestMapping(value= "/clients/current/accounts", method = RequestMethod.GET)
+    public Set<Account> getCurrentAccounts(Authentication authentication){
         Client client = this.clientRepository.findByEmail(authentication.getName());
-        List<Account> accounts = accountRepository.findAll();
-        AccountDTO accDTO = null;
-        List<AccountDTO> accountDTOS = null;
-        for(Account acc : accounts){
-            if(acc.getClient().equals(client)){
-                accDTO = new AccountDTO(acc);
-            }
-            accountDTOS.add(accDTO);
-        }
-        return accountDTOS;
+        return client.getAccounts();
+    }
+/*
+    @RequestMapping(value = "/accounts/{number}", method = RequestMethod.GET)
+    public AccountDTO getAccountByNumber(@PathVariable String number){
+        Account acc = accountRepository.findByNumber(number);
+        return new AccountDTO(acc);
     }
 
  */

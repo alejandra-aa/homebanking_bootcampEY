@@ -24,10 +24,11 @@ public class WebAuthorization extends WebSecurityConfigurerAdapter {
                 .antMatchers("/web/css/*", "/web/js/*", "/web/img/*").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/clients").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/clients/current/accounts").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/clients/current/accounts").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/clients/current/cards?cardType=${this.cardType}&cardColor=${this.cardColor}").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/clients/current/cards?cardType=${this.cardType}&cardColor=${this.cardColor}").permitAll()
-
-                .antMatchers(HttpMethod.GET, "/api/clients/current/accounts").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/transactions?fromAccountNumber=${this.accountFromNumber}&toAccountNumber=${this.accountToNumber}&amount=${this.amount}&description=${this.description}").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/loans/**").permitAll()
                 .antMatchers("/h2-console/**").permitAll()
                 .antMatchers("/**").hasAuthority("CLIENT");
                 //.antMatchers(HttpMethod.POST, "api/login").permitAll()

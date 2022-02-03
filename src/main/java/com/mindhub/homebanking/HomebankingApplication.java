@@ -63,11 +63,11 @@ public class HomebankingApplication {
 			Transaction t10 = new Transaction(TransactionType.DEBIT, -4000, "Transaccion 10", LocalDateTime.now(), acc4);
 			transactionRepository.save(t10);
 
-			Loan l1 = new Loan("Hipotecario", 500.000, List.of(12, 24, 36, 48, 60));
+			Loan l1 = new Loan("Hipotecario", 500000, List.of(12, 24, 36, 48, 60));
 			loanRepository.save(l1);
-			Loan l2 = new Loan("Personal", 100.000, List.of(6, 12, 24));
+			Loan l2 = new Loan("Personal", 100000, List.of(6, 12, 24));
 			loanRepository.save(l2);
-			Loan l3 = new Loan("Automotriz", 300.000, List.of(6, 12, 24, 36));
+			Loan l3 = new Loan("Automotriz", 300000, List.of(6, 12, 24, 36));
 			loanRepository.save(l3);
 
 			ClientLoan cl1 = new ClientLoan(400000, 60, client1, l1);
@@ -89,5 +89,8 @@ public class HomebankingApplication {
 
 		};
 	}
+
+
+
 
 }
